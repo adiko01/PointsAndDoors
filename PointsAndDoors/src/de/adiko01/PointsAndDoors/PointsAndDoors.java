@@ -4,6 +4,7 @@ import java.awt.Point;
 
 public class PointsAndDoors {
 	// Konstanten
+	/** Verion der Spielmachenik */
 	final static String VERSION = "2.0";
 	
 	// Variablen

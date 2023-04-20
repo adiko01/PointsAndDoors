@@ -17,15 +17,21 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-
+/**
+ * GUI interpreter für {@link PointsAndDoors}
+ * @author adiko01
+ */
 public class PointsAndDoorsGUI {
 	//Konstanten
+	/** Verion der GUI */
 	final static String GUI_VERSION= "1.0";
 	
+	/** Basis Frame */
 	private JFrame frmPointAndDoors;
 
 	/**
 	 * Launch the application.
+	 * @param args Argumente zur Übergabe (Werden nicht berücksichtigt)
 	 */
 	public static void main(String[] args) {	
 		EventQueue.invokeLater(new Runnable() {
@@ -51,7 +57,7 @@ public class PointsAndDoorsGUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		//Starte ein neues Spiel
+		/** Das aktive Spiel */
 		PointsAndDoors game = new PointsAndDoors();
 		
 		
@@ -61,12 +67,13 @@ public class PointsAndDoorsGUI {
 		frmPointAndDoors.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPointAndDoors.getContentPane().setLayout(null);
 				
-		//Panels
+		/** Arry mit den Spielfeldern */
 		JPanel[] panels = new JPanel[100];
 		for (int i = 0; i < 100 ; i++ ) {
 			//Erstelle das Panel
 			panels[i] = new JPanel ();
 			
+			//Setze einen weißen Hintergrund
 			panels[i].setBackground(Color.WHITE);		
 				
 			//Rahmen der Panels
@@ -85,10 +92,12 @@ public class PointsAndDoorsGUI {
 			frmPointAndDoors.getContentPane().add(panels[i]);
 		}
 		
+		/** Label mit der aktuellen Aufgabe */
 		JLabel lbl_task = new JLabel(game.getTask());
 		lbl_task.setBounds(390, 582, 186, 21);
 		frmPointAndDoors.getContentPane().add(lbl_task);		
 		
+		/** Button für das runter bewegen */
 		JButton btn_runter = new JButton("Runter");
 		btn_runter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -99,6 +108,7 @@ public class PointsAndDoorsGUI {
 		btn_runter.setBounds(10, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_runter);
 		
+		/** Button für das rauf bewegen */
 		JButton btn_rauf = new JButton("Rauf");
 		btn_rauf.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -109,6 +119,7 @@ public class PointsAndDoorsGUI {
 		btn_rauf.setBounds(105, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_rauf);
 		
+		/** Button für das nach links bewegen */
 		JButton btn_links = new JButton("Links");
 		btn_links.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,6 +130,7 @@ public class PointsAndDoorsGUI {
 		btn_links.setBounds(200, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_links);
 		
+		/** Button für das nach rechts bewegen */
 		JButton btn_rechts = new JButton("Rechts");
 		btn_rechts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -130,15 +142,11 @@ public class PointsAndDoorsGUI {
 		btn_rechts.setBounds(295, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_rechts);
 		
+		/** Label über dem Feld */
 		JLabel lbl_Header = new JLabel(Konstanten.TITLE + " by adiko01");
 		lbl_Header.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_Header.setBounds(10, 21, 546, 21);
 		frmPointAndDoors.getContentPane().add(lbl_Header);
-		
-		JLabel lbl_P = new JLabel("P");
-		lbl_P.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lbl_P.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_P.setBounds(173, 276, 45, 45);
 		
 		aktualisieren(game , panels, lbl_task);
 		

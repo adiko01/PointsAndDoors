@@ -2,11 +2,20 @@ package de.adiko01.PointsAndDoors;
 
 import java.util.Scanner;
 
+/**
+ * Terminal interpreter für {@link PointsAndDoors}
+ * @author adiko01
+ */
 public class PointsAndDoorsTerminal {
+	//Konstanten
+	/** Verion des Terminalinterpreters */
 	final static String VERSION = "2.0";
+	
+	
 	public static void main (String[] args) {
 		
 		while (true) {
+			/** Das aktive Spiel */
 			PointsAndDoors game = new PointsAndDoors();
 			
 			System.out.print(
@@ -26,9 +35,9 @@ public class PointsAndDoorsTerminal {
 					+ "#                                                               #\n"
 					+ "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
 					);
-			/*
-			 * Spieler Bewegung
-			 */
+			
+			//Spieler Bewegung
+			@SuppressWarnings("resource")
 			Scanner s = new Scanner(System.in);
 			do {
 				printMap(game);			
@@ -74,10 +83,12 @@ public class PointsAndDoorsTerminal {
 		}
 	}
 	
+	/**
+	 * Druckt die Karte auf die Konsole
+	 * @param game Ein aktives Spiel als Objekt vom Typ {@link PointsAndDoors}
+	 */
 	private static void printMap(PointsAndDoors game) {
-		/*
-		 * Drucke die Karte in die Konsole
-		 */
+		//Drucke die Karte in die Konsole
 		System.out.print(
 				  "- - - - - - - - - - - - - - - - - - - - -\n"
 				+ "\033[0;33mAUFGABE: " + game.getTask() + " \033[0m\n"
