@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class Changelog extends JFrame {
 	
 	private JPanel contentPane;
@@ -34,8 +35,6 @@ public class Changelog extends JFrame {
 	 */
 	public Changelog() {
 		setTitle(Konstanten.TITLE + ": Changelog");
-		//this
-		JFrame bla = this;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 600, 400);

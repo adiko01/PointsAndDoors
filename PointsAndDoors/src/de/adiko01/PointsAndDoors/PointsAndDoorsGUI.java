@@ -192,9 +192,8 @@ public class PointsAndDoorsGUI {
 	 * @param game
 	 * @param panels
 	 */
-	private void aktualisieren (PointsAndDoors game , JPanel[] panels, JLabel lbl_task) {
-		//TODO make this happen
-		
+	@SuppressWarnings("deprecation")
+	private void aktualisieren (PointsAndDoors game , JPanel[] panels, JLabel lbl_task) {	
 		if (game.getStatus() == GameStatus.RUN) {
 			for (int i = 0; i < 100 ; i++) {
 				//Hintergrundfarbe der Panels
