@@ -1,5 +1,5 @@
 ---
-name: Fehler in der GUI melden
+name: Fehler im Game melden
 about: Hier kann ein Fehler in der GUI gemeldet werden.
 title: "[Game] FehlerHierKurzUndKnappBeschreiben"
 labels: Game

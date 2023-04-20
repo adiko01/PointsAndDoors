@@ -1,5 +1,5 @@
 ---
-name: Fehler in der GUI melden
+name: Fehler in der Terminal Version melden
 about: Hier kann ein Fehler in der GUI gemeldet werden.
 title: "[Terminal] FehlerHierKurzUndKnappBeschreiben"
 labels: Terminal
