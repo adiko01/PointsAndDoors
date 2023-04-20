@@ -7,6 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
@@ -15,8 +16,8 @@ import java.awt.Font;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import javax.swing.JMenu;
+
 
 public class PointsAndDoorsGUI {
 	final static String GUIversion = "BETA";
@@ -59,7 +60,7 @@ public class PointsAndDoorsGUI {
 		frmPointAndDoors.setBounds(100, 100, 580, 650);
 		frmPointAndDoors.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPointAndDoors.getContentPane().setLayout(null);
-		
+				
 		//Panels
 		JPanel[] panels = new JPanel[100];
 		for (int i = 0; i < 100 ; i++ ) {
@@ -125,6 +126,7 @@ public class PointsAndDoorsGUI {
 				aktualisieren(game, panels, lbl_task);
 			}
 		});
+		
 		btn_rechts.setBounds(295, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_rechts);
 		
@@ -144,6 +146,25 @@ public class PointsAndDoorsGUI {
 		menuBar.setBounds(0, 0, 556, 22);
 		frmPointAndDoors.getContentPane().add(menuBar);
 		
+		JMenuItem mntm_Exit = new JMenuItem("Beenden");
+		mntm_Exit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		menuBar.add(mntm_Exit);
+		
+		JMenu mnNewMenu = new JMenu("About");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntm_Changelog = new JMenuItem("Changelog");
+		mntm_Changelog.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Changelog.main(null);
+			}
+		});
+		mnNewMenu.add(mntm_Changelog);
+		
 		JMenuItem barItem_About = new JMenuItem("About");
 		barItem_About.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -154,16 +175,10 @@ public class PointsAndDoorsGUI {
 								+ "GitHub: adiko01/HSPV-4.3-GdP");
 			}
 		});
-		
-		JMenuItem mntm_Exit = new JMenuItem("Beenden");
-		mntm_Exit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		menuBar.add(mntm_Exit);
-		menuBar.add(barItem_About);
+		mnNewMenu.add(barItem_About);
 	}
+	
+	
 	/**
 	 * Akualisiert das Spielfeld
 	 * @param game
