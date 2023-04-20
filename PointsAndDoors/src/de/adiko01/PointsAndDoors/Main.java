@@ -20,7 +20,11 @@ public class Main {
 				System.out.print(Konstanten.CHANGELOG_GUI);
 			}  else if (args[1].equalsIgnoreCase("game")) {
 				System.out.print(Konstanten.CHANGELOG_GAME);
+			} else {
+				System.out.print(Konstanten.HELP);
 			}
+		} else {
+			System.out.print(Konstanten.HELP);
 		}
 	}
 
