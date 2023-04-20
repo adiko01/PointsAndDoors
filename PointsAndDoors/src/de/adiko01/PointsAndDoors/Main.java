@@ -1,7 +1,21 @@
 package de.adiko01.PointsAndDoors;
 
+/** Start Classe der JAR File
+ * @author adiko01
+ */
 public class Main {
 	
+	/** Start Methode
+	 * Standartdmäßig wird der GUI Modus gestartet
+	 * @param args <br>
+	 * 				Kein Parameter: wie {@code gui} <br>
+	 * 				{@code help}: Zeigt die Hilfe <br>
+	 * 				{@code changelog cmd}: Zeigt den Changelog der Terminal Version an.<br>
+	 * 				{@code changelog game}: Zeigt den Changelog des Spieles an.<br>
+	 * 				{@code changelog gui}: Zeigt den Changelog der Gui.<br>
+	 * 				{@code cmd}: Startet PoinsAndDoors im Terminal Modus.<br>
+	 * 				{@code gui}: Startet PoinsAndDoors im GUI Modus.
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		if (args.length == 0) {
