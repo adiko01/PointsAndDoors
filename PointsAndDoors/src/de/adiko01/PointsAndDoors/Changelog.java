@@ -45,7 +45,7 @@ public class Changelog extends JFrame {
 	 * Create the frame.
 	 */
 	public Changelog() {
-		setTitle("HHH");
+		setTitle(Konstanten.TITLE + ": Changelog");
 		//this
 		JFrame bla = this;
 		
@@ -62,12 +62,12 @@ public class Changelog extends JFrame {
 		contentPane.add(tabbedPane);
 		
 		TextArea textArea_Game = new TextArea();
-		textArea_Game.setText("Version 1.0 - 2023-04-20:\r\nHallo Welt\r\nBl Bndos");
+		textArea_Game.setText(Konstanten.CHANGELOG_GAME);
 		textArea_Game.setEditable(false);
 		tabbedPane.addTab("Game", null, textArea_Game, null);
 		
 		TextArea textArea_GUI = new TextArea();
-		textArea_GUI.setText("Version 1.0 - 2023-04-20:\r\nHallo Welt\r\nBl Bndos");
+		textArea_GUI.setText(Konstanten.CHANGELOG_GUI);
 		textArea_GUI.setEditable(false);
 		tabbedPane.addTab("GUI", null, textArea_GUI, null);
 		

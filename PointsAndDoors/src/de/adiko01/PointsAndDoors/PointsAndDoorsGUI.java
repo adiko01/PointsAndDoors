@@ -20,8 +20,9 @@ import javax.swing.JMenu;
 
 
 public class PointsAndDoorsGUI {
+	//Konstanten
 	final static String GUIversion = "BETA";
-	final String title = "PointsAndDoors - Game Version: " + PointsAndDoors.Version + " - GUI: " + GUIversion;
+	
 	private JFrame frmPointAndDoors;
 
 	/**
@@ -56,7 +57,7 @@ public class PointsAndDoorsGUI {
 		
 		
 		frmPointAndDoors = new JFrame();
-		frmPointAndDoors.setTitle(title);
+		frmPointAndDoors.setTitle(Konstanten.TITLE);
 		frmPointAndDoors.setBounds(100, 100, 580, 650);
 		frmPointAndDoors.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPointAndDoors.getContentPane().setLayout(null);
@@ -130,7 +131,7 @@ public class PointsAndDoorsGUI {
 		btn_rechts.setBounds(295, 582, 85, 21);
 		frmPointAndDoors.getContentPane().add(btn_rechts);
 		
-		JLabel lbl_Header = new JLabel(title + " by adiko01");
+		JLabel lbl_Header = new JLabel(Konstanten.TITLE + " by adiko01");
 		lbl_Header.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_Header.setBounds(10, 21, 546, 21);
 		frmPointAndDoors.getContentPane().add(lbl_Header);
