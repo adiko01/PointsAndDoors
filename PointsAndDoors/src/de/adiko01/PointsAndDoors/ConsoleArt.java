@@ -7,8 +7,16 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 
+/**
+ * Klasse zum erstellen eines Schriftzuges in der Konsole als ASCII Art
+ * @author adiko01
+ */
 public class ConsoleArt {
 
+	/**
+	 * Methode zum erstellen eines Schriftzuges in der Konsole als ASCII Art
+	 * @param TEXT Text der als ASCII Art auf der Konsole erscheinen soll.
+	 */
     public static void main(String TEXT) {
 
         int width = 151;
