@@ -21,5 +21,12 @@ public class Konstanten {
 	
 	/** Help Terminal */
 	final static String HELP = TITLE + "\n"
-			+ "HELP";
+			+ "HELP\n"
+			+ "Optionen:\n"
+			+ "    help              Zeigt diese Seite.\n"
+			+ "    changelog cmd     Zeigt den Changelog der Terminal Version an.\n"
+			+ "    changelog game    Zeigt den Changelog des Spieles an.\n"
+			+ "    changelog gui     Zeigt den Changelog der Gui.\n"
+			+ "    cmd               Startet PoinsAndDoors im Terminal Modus.\n"
+			+ "    gui               Startet PoinsAndDoors im GUI Modus.\n";
 }
