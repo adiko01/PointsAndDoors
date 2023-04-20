@@ -1,4 +1,4 @@
-#PointsAndDoors
+# PointsAndDoors
 
 Bewege dich mit hilfe der Tasten auf einem 10x10 Spielfeld.
 Erfülle beim Spielen folgende Aufgaben:
