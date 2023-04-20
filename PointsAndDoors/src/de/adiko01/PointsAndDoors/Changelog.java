@@ -18,10 +18,9 @@ import javax.swing.JLabel;
 import javax.swing.JTextPane;
 import javax.swing.ScrollPaneConstants;
 import java.awt.TextArea;
+import java.awt.BorderLayout;
 
 public class Changelog extends JFrame {
-	
-	final static String ln = "<br>";
 	
 	private JPanel contentPane;
 
@@ -50,15 +49,14 @@ public class Changelog extends JFrame {
 		JFrame bla = this;
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 600, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(5, 5, 426, 253);
 		contentPane.add(tabbedPane);
 		
 		TextArea textArea_Game = new TextArea();
@@ -70,6 +68,11 @@ public class Changelog extends JFrame {
 		textArea_GUI.setText(Konstanten.CHANGELOG_GUI);
 		textArea_GUI.setEditable(false);
 		tabbedPane.addTab("GUI", null, textArea_GUI, null);
+		
+		TextArea textArea_Terminal = new TextArea();
+		textArea_Terminal.setText("Wird ausgeführt, wenn die JAR mit dem Parameter cmd geöffnet wird.\n\n" + Konstanten.CHANGELOG_TERMINAL);
+		textArea_Terminal.setEditable(false);
+		tabbedPane.addTab("Terminal", null, textArea_Terminal, null);
 		
 	}
 }
