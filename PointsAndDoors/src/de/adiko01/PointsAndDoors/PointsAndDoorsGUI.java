@@ -25,7 +25,7 @@ import javax.swing.WindowConstants;
 public class PointsAndDoorsGUI {
 	//Konstanten
 	/** Verion der GUI */
-	final static String GUI_VERSION= "1.0";
+	final static String GUI_VERSION= "1.1";
 
 	/** Basis Frame */
 	private JFrame frmPointAndDoors;
@@ -168,6 +168,14 @@ public class PointsAndDoorsGUI {
 			}
 		});
 		menuBar.add(mntm_Exit);
+		
+		JMenuItem mntm_man = new JMenuItem("Anleitung");
+		mntm_man.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GUI_Anleitung.main(null);
+			}
+		});
+		menuBar.add(mntm_man);
 
 		JMenu mnNewMenu = new JMenu("About");
 		menuBar.add(mnNewMenu);

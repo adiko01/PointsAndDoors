@@ -6,7 +6,9 @@ public class Konstanten {
 
 	/** Changelog GUI */
 	final static String CHANGELOG_GUI =
-			"Version 1.0 - 2023-04-20\n"
+			"Version 1.1 - 2023-XX-XX\n"
+			+ " - Anleitung hinzugefügt\n"
+			+ "Version 1.0 - 2023-04-20\n"
 			+ " - Erste GUI";
 	/** Holt die Konstate CHANGELOG_GUI */
 	public String getCHANGELOG_GUI() {
