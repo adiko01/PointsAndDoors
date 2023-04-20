@@ -10,14 +10,14 @@ public class PointsAndDoorsTerminal {
 	//Konstanten
 	/** Verion des Terminalinterpreters */
 	final static String VERSION = "2.0";
-	
-	
+
+
 	public static void main (String[] args) {
-		
+
 		while (true) {
 			/** Das aktive Spiel */
 			PointsAndDoors game = new PointsAndDoors();
-			
+
 			System.out.print(
 					  "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
 					+ "#                        PointsAndDoors                         #\n"
@@ -35,13 +35,13 @@ public class PointsAndDoorsTerminal {
 					+ "#                                                               #\n"
 					+ "# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\n"
 					);
-			
+
 			//Spieler Bewegung
 			@SuppressWarnings("resource")
 			Scanner s = new Scanner(System.in);
 			do {
-				printMap(game);			
-				
+				printMap(game);
+
 				do {
 					char c;
 					System.out.print("Bewegung [u,d,l,r]: ");
@@ -61,17 +61,17 @@ public class PointsAndDoorsTerminal {
 						} catch (IllegalMoveException e) {
 							System.out.println("Die Eingabe war ungültig. Wiederhole!");
 						}
-					}					
+					}
 				} while(true);
 			} while (game.getStatus() == GameStatus.RUN);
-			
+
 			//Gewinner Auswerten
 			if (game.getStatus() == GameStatus.PlayerWins) {
 				ConsoleArt.main("GEWONNEN");
 			} else if (game.getStatus() == GameStatus.EnemyWins) {
 				ConsoleArt.main("VERLOREN");
 			}
-			
+
 			//Nach dem Spiel das Spiel neustarten
 			System.out.println("In 5 Sekunden wird eine neue Runde gestartet \n"
 					+ "Zum Abbrechen, das Fenster Schließen, oder mit \033[0;31mStrg \033[0m + \033[0;31m C \033[0m das Programm beenden.");
@@ -79,10 +79,10 @@ public class PointsAndDoorsTerminal {
 				Thread.sleep(5000);
 	        } catch (InterruptedException ignored) {
 	        }
-			
+
 		}
 	}
-	
+
 	/**
 	 * Druckt die Karte auf die Konsole
 	 * @param game Ein aktives Spiel als Objekt vom Typ {@link PointsAndDoors}
@@ -94,7 +94,7 @@ public class PointsAndDoorsTerminal {
 				+ "\033[0;33mAUFGABE: " + game.getTask() + " \033[0m\n"
 				+ "- - - - - - - - - - - - - - - - - - - - -\n"
 				);
-		
+
 		for (int r=1; r<=10; r++) {
 			for (int l=1; l<=10; l++) {
 				if (game.getPoint(GameObjects.Player).x == l && game.getPoint(GameObjects.Player).y==r) {

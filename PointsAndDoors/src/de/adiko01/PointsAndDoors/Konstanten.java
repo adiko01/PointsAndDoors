@@ -3,7 +3,7 @@ package de.adiko01.PointsAndDoors;
 public class Konstanten {
 	/** Programmtitel der Fenster */
 	final static String TITLE = "PointsAndDoors - Game Version: " + PointsAndDoors.VERSION + " - GUI: " + PointsAndDoorsGUI.GUI_VERSION;
-		
+
 	/** Changelog GUI */
 	final static String CHANGELOG_GUI =
 			"Version 1.0 - 2023-04-20\n"
@@ -12,8 +12,8 @@ public class Konstanten {
 	public String getCHANGELOG_GUI() {
 		return CHANGELOG_GUI;
 	}
-	
-	
+
+
 	/** Changelog Terminalinterpreter */
 	final static String CHANGELOG_TERMINAL =
 			"Version 2.0 - 2023-04-20\n"
@@ -22,7 +22,7 @@ public class Konstanten {
 	public String getCHANGELOG_TERMINAL() {
 		return CHANGELOG_TERMINAL;
 	}
-	
+
 	/** Changelog Game */
 	final static String CHANGELOG_GAME =
 			"Version 2.0 - 2023-04-20\n"
@@ -49,8 +49,8 @@ public class Konstanten {
 	public String getCHANGELOG_GAME() {
 		return CHANGELOG_GAME;
 	}
-	
-	
+
+
 	/** Help Terminal */
 	final static String HELP = TITLE + "\n"
 			+ "HELP\n"
@@ -61,7 +61,7 @@ public class Konstanten {
 			+ "    changelog gui     Zeigt den Changelog der Gui.\n"
 			+ "    cmd               Startet PoinsAndDoors im Terminal Modus.\n"
 			+ "    gui               Startet PoinsAndDoors im GUI Modus.\n";
-	
+
 	/** Holt die Konstate HELP für den Programm aufruf im Terminal*/
 	public String getHELP() {
 		return HELP;

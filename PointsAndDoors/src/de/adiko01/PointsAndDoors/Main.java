@@ -4,7 +4,7 @@ package de.adiko01.PointsAndDoors;
  * @author adiko01
  */
 public class Main {
-	
+
 	/** Start Methode
 	 * Standartdmäßig wird der GUI Modus gestartet
 	 * @param args <br>
@@ -23,11 +23,11 @@ public class Main {
 			PointsAndDoorsGUI.main(null);
 		} else if (args[0].equalsIgnoreCase("help")) {
 			System.out.print(Konstanten.HELP);
-		} else if (args[0].equalsIgnoreCase("gui")) {		
-			PointsAndDoorsGUI.main(null);	
-		}  else if (args[0].equalsIgnoreCase("cmd")) {		
-			PointsAndDoorsTerminal.main(null);	
-		}  else if (args[0].equalsIgnoreCase("changelog")) {		
+		} else if (args[0].equalsIgnoreCase("gui")) {
+			PointsAndDoorsGUI.main(null);
+		}  else if (args[0].equalsIgnoreCase("cmd")) {
+			PointsAndDoorsTerminal.main(null);
+		}  else if (args[0].equalsIgnoreCase("changelog")) {
 			if (args[1].equalsIgnoreCase("cmd")) {
 				System.out.print(Konstanten.CHANGELOG_TERMINAL);
 			} else if (args[1].equalsIgnoreCase("gui")) {

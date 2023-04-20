@@ -6,23 +6,23 @@ public class PointsAndDoors {
 	// Konstanten
 	/** Verion der Spielmachenik */
 	final static String VERSION = "2.0";
-	
+
 	// Variablen
 	private String Task;
-	
+
 	// Punkte
 	private Point player = new Point();
 	private Point enemy = new Point();
 	private Point door = new Point();
 	private Point money = new Point();
-	
+
 	// Spiel Status
 	private GameStatus status;
-	
+
 	PointsAndDoors() {
 		// Variablen
 		Task = "Sammele das Geldstück auf.";
-		
+
 		// Punkte
 		player.move(1,1);
 		enemy.x = (int) (Math.random() * 10 + 1);
@@ -31,16 +31,16 @@ public class PointsAndDoors {
 		door.y = (int) (Math.random() * 10 + 1);
 		money.x = (int) (Math.random() * 10 + 1);
 		money.y = (int) (Math.random() * 10 + 1);
-		
+
 		//Spiel Status
 		status = GameStatus.RUN;
 	}
-	
+
 	private Boolean isPointReachable(Point StartPoint, int dX, int dY) {
-		
+
 		int x = StartPoint.x + dX;
 		int y = StartPoint.y + dY;
-		
+
 		if (x < 1 || x > 10) {
 			return false;
 		} else if (y < 1 || y > 10) {
@@ -48,9 +48,9 @@ public class PointsAndDoors {
 		}
 		return true;
 	}
-	
+
 	private void gameLogic () {
-			
+
 		// Auswertung Spieler
 		if (player.equals(money)) {
 			money.move(-1, -1);
@@ -59,11 +59,11 @@ public class PointsAndDoors {
 			Task = "Du hast Gewonnen";
 			status = GameStatus.PlayerWins;
 		}
-		
+
 		// Bewege Gegner
 		int dX = 0;
 		int dY = 0;
-		
+
 		do {
 			int pos = (int) (Math.random() * 8 + 1);
 			if (pos == 1) {
@@ -93,8 +93,8 @@ public class PointsAndDoors {
 			}
 		} while (!isPointReachable(enemy, dX, dY));
 		enemy.translate(dX, dY);
-		
-		
+
+
 		// Auswertung Gegner
 		if (enemy.equals(money)) {
 			money.move(-1, -1);
@@ -104,8 +104,8 @@ public class PointsAndDoors {
 			status = GameStatus.EnemyWins;
 		}
 	}
-	
-	/** 
+
+	/**
 	 * @return ob das Geldstück gefunden wurde
 	 */
 	public boolean moneyFound () {
@@ -114,7 +114,7 @@ public class PointsAndDoors {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Bewegt den Spieler
 	 * @param c
@@ -149,11 +149,11 @@ public class PointsAndDoors {
 			throw new IllegalMoveException();
 		}
 	}
-	
+
 	public GameStatus getStatus () {
 		return status;
 	}
-	
+
 	/**
 	 * @return Aktuelle Aufgabe als String
 	 */
@@ -182,10 +182,10 @@ public class PointsAndDoors {
 		ret = (p.y - 1) * 10;
 		ret = ret + p.x;
 		ret = ret - 1;
-		
+
 		return ret;
 	}
-	
+
 	/**
 	 * @param obj ist ein Werte aus {@code GameObjects}
 	 * @return Position des Objektes auf dem Spielfeld als {@code Point}
