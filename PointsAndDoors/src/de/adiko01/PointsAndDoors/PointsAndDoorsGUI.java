@@ -15,6 +15,8 @@ import java.awt.Font;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class PointsAndDoorsGUI {
 	final static String GUIversion = "BETA";
@@ -59,28 +61,28 @@ public class PointsAndDoorsGUI {
 		frmPointAndDoors.getContentPane().setLayout(null);
 		
 		//Panels
-				JPanel[] panels = new JPanel[100];
-				for (int i = 0; i < 100 ; i++ ) {
-					//Erstelle das Panel
-					panels[i] = new JPanel ();
-					
-					panels[i].setBackground(Color.WHITE);		
-					
-					//Rahmen der Panels
-					panels[i].setBorder(BorderFactory.createLineBorder(Color.black));
+		JPanel[] panels = new JPanel[100];
+		for (int i = 0; i < 100 ; i++ ) {
+			//Erstelle das Panel
+			panels[i] = new JPanel ();
+			
+			panels[i].setBackground(Color.WHITE);		
+				
+			//Rahmen der Panels
+			panels[i].setBorder(BorderFactory.createLineBorder(Color.black));
 						
-					//Position Festlegen
-					//Festlegen der Spalte
-					int x = ((i % 10) * 50) + 30;
-					//Festlegen der Zeile
-					int y = ((i / 10) * 50) + 50;
-							
-					//Setze die Maße des Panels
-					panels[i].setBounds(x, y, 50, 50);
+			//Position Festlegen
+			//Festlegen der Spalte
+			int x = ((i % 10) * 50) + 30;
+			//Festlegen der Zeile
+			int y = ((i / 10) * 50) + 50;
+						
+			//Setze die Maße des Panels
+			panels[i].setBounds(x, y, 50, 50);
 					
-					//Füge das Panel hinzu
-					frmPointAndDoors.getContentPane().add(panels[i]);
-				}
+			//Füge das Panel hinzu
+			frmPointAndDoors.getContentPane().add(panels[i]);
+		}
 		
 		JLabel lbl_task = new JLabel(game.getTask());
 		lbl_task.setBounds(390, 582, 186, 21);
