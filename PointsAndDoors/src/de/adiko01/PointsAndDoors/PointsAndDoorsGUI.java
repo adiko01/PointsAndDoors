@@ -21,7 +21,7 @@ import javax.swing.JMenu;
 
 public class PointsAndDoorsGUI {
 	//Konstanten
-	final static String GUI_VERSION= "BETA";
+	final static String GUI_VERSION= "1.0";
 	
 	private JFrame frmPointAndDoors;
 

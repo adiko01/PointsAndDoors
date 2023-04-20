@@ -3,7 +3,7 @@ package de.adiko01.PointsAndDoors;
 import java.util.Scanner;
 
 public class PointsAndDoorsTerminal {
-	final static String VERSION = "1.0";
+	final static String VERSION = "2.0";
 	public static void main (String[] args) {
 		
 		while (true) {

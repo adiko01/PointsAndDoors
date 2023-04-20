@@ -4,7 +4,7 @@ import java.awt.Point;
 
 public class PointsAndDoors {
 	// Konstanten
-	final static String VERSION = "1.0";
+	final static String VERSION = "2.0";
 	
 	// Variablen
 	private String Task;
