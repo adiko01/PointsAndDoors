@@ -18,4 +18,8 @@ public class Konstanten {
 	final static String CHANGELOG_GAME =
 			"Version 1.0 - 2023-XX-XX\n"
 			+ "";
+	
+	/** Help Terminal */
+	final static String HELP = TITLE + "\n"
+			+ "HELP";
 }
