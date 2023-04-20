@@ -4,15 +4,25 @@ public class Konstanten {
 	/** Programmtitel der Fenster */
 	final static String TITLE = "PointsAndDoors - Game Version: " + PointsAndDoors.VERSION + " - GUI: " + PointsAndDoorsGUI.GUI_VERSION;
 	
+	
 	/** Changelog GUI */
 	final static String CHANGELOG_GUI =
 			"Version 1.0 - 2023-04-20\n"
 			+ " - Erste GUI";
+	/** Holt die Konstate CHANGELOG_GUI */
+	public String getCHANGELOG_GUI() {
+		return CHANGELOG_GUI;
+	}
+	
 	
 	/** Changelog Terminalinterpreter */
 	final static String CHANGELOG_TERMINAL =
 			"Version 2.0 - 2023-04-20\n"
 			+ " - Baut auf der neuen Game Version 2.0 auf.";
+	/** Holt die Konstate CHANGELOG_TERMINAL */
+	public String getCHANGELOG_TERMINAL() {
+		return CHANGELOG_TERMINAL;
+	}
 	
 	/** Changelog Game */
 	final static String CHANGELOG_GAME =
@@ -36,6 +46,11 @@ public class Konstanten {
 			+ " - Spiel in PointsAndDoors umbenannt\n"
 			+ "Version 1.0 - 2023-02-22:\n"
 			+ " - Spiel Erstellt";
+	/** Holt die Konstate CHANGELOG_GAME mit dem Changelog des Spieles */
+	public String getCHANGELOG_GAME() {
+		return CHANGELOG_GAME;
+	}
+	
 	
 	/** Help Terminal */
 	final static String HELP = TITLE + "\n"
@@ -47,4 +62,9 @@ public class Konstanten {
 			+ "    changelog gui     Zeigt den Changelog der Gui.\n"
 			+ "    cmd               Startet PoinsAndDoors im Terminal Modus.\n"
 			+ "    gui               Startet PoinsAndDoors im GUI Modus.\n";
+	
+	/** Holt die Konstate HELP für den Programm aufruf im Terminal*/
+	public String getHELP() {
+		return HELP;
+	}
 }
