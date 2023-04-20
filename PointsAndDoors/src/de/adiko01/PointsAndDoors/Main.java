@@ -13,6 +13,8 @@ public class Main {
 							+ "");
 		} else if (args[0].equalsIgnoreCase("gui")) {		
 			PointsAndDoorsGUI.main(null);	
+		}  else if (args[0].equalsIgnoreCase("cmd")) {		
+			PointsAndDoorsTerminal.main(null);	
 		}
 	}
 

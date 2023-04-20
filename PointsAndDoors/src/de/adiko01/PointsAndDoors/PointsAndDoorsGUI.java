@@ -21,7 +21,7 @@ import javax.swing.JMenu;
 
 public class PointsAndDoorsGUI {
 	//Konstanten
-	final static String GUIversion = "BETA";
+	final static String GUI_VERSION= "BETA";
 	
 	private JFrame frmPointAndDoors;
 
@@ -171,8 +171,8 @@ public class PointsAndDoorsGUI {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null,
 						"PointsAndDoors - by adiko01\n"
-								+ "Game Version: " + PointsAndDoors.Version + "\n"
-								+ "GUI Version: " + GUIversion + "\n"
+								+ "Game Version: " + PointsAndDoors.VERSION + "\n"
+								+ "GUI Version: " + GUI_VERSION + "\n"
 								+ "GitHub: adiko01/HSPV-4.3-GdP");
 			}
 		});

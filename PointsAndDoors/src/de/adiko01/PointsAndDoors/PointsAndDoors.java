@@ -4,7 +4,7 @@ import java.awt.Point;
 
 public class PointsAndDoors {
 	// Konstanten
-	final static String Version = "1.0";
+	final static String VERSION = "1.0";
 	
 	// Variablen
 	private String Task;
@@ -35,7 +35,6 @@ public class PointsAndDoors {
 		status = GameStatus.RUN;
 	}
 	
-	
 	private Boolean isPointReachable(Point StartPoint, int dX, int dY) {
 		
 		int x = StartPoint.x + dX;
@@ -50,8 +49,7 @@ public class PointsAndDoors {
 	}
 	
 	private void gameLogic () {
-		
-		
+			
 		// Auswertung Spieler
 		if (player.equals(money)) {
 			money.move(-1, -1);
@@ -146,6 +144,8 @@ public class PointsAndDoors {
 		if (isPointReachable(player, dX, dY)) {
 			player.translate(dX, dY);
 			gameLogic();
+		} else {
+			throw new IllegalMoveException();
 		}
 	}
 	
@@ -160,7 +160,6 @@ public class PointsAndDoors {
 		return Task;
 	}
 	/**
-	 * 
 	 * @param obj ist ein Werte aus {@code GameObjects}
 	 * @return Position des Objektes auf dem Spielfeld als {@code int}
 	 */
@@ -183,6 +182,27 @@ public class PointsAndDoors {
 		ret = ret + p.x;
 		ret = ret - 1;
 		
+		return ret;
+	}
+	
+	/**
+	 * @param obj ist ein Werte aus {@code GameObjects}
+	 * @return Position des Objektes auf dem Spielfeld als {@code Point}
+	 */
+	public Point getPoint (GameObjects obj) {
+		// Rückgabe Wert
+		Point ret;
+		if (obj == GameObjects.Player) {
+			ret = new Point(player);
+		} else if (obj == GameObjects.Enemy) {
+			ret = new Point(enemy);
+		} else if (obj == GameObjects.Door) {
+			ret = new Point(door);
+		} else if (obj == GameObjects.Money) {
+			ret = new Point(money);
+		} else {
+			ret = null;
+		}
 		return ret;
 	}
 }
