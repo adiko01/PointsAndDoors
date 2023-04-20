@@ -1,24 +1,13 @@
 package de.adiko01.PointsAndDoors;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.TextArea;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JSplitPane;
-import java.awt.CardLayout;
-import javax.swing.JButton;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JScrollPane;
-import javax.swing.JLabel;
-import javax.swing.JTextPane;
-import javax.swing.ScrollPaneConstants;
-import java.awt.TextArea;
-import java.awt.BorderLayout;
+import javax.swing.border.EmptyBorder;
 
 public class Changelog extends JFrame {
 	
