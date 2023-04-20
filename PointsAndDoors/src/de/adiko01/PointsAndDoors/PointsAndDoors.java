@@ -66,7 +66,7 @@ public class PointsAndDoors {
 		int dY = 0;
 		
 		do {
-			int pos = (int) (Math.random() * 9 + 1);
+			int pos = (int) (Math.random() * 8 + 1);
 			if (pos == 1) {
 				dX = 1;
 				dY = 0;
@@ -77,8 +77,8 @@ public class PointsAndDoors {
 				dX = 1;
 				dY = 1;
 			} else if (pos == 4) {
-				dX = 0;
-				dY = 0;
+				dX = 1;
+				dY = -1;
 			} else if (pos == 5) {
 				dX = -1;
 				dY = 0;
@@ -91,9 +91,6 @@ public class PointsAndDoors {
 			} else if (pos == 8) {
 				dX = -1;
 				dY = 1;
-			} else if (pos == 9) {
-				dX = 1;
-				dY = -1;
 			}
 		} while (!isPointReachable(enemy, dX, dY));
 		enemy.translate(dX, dY);
