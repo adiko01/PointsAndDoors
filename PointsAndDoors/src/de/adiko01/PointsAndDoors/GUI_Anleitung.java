@@ -12,6 +12,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 
+@SuppressWarnings("serial")
 public class GUI_Anleitung extends JFrame {
 
 	private JPanel contentPane;
@@ -110,5 +111,11 @@ public class GUI_Anleitung extends JFrame {
 		lbl_Door_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lbl_Door_2.setBounds(188, 190, 163, 50);
 		panel_Figuren.add(lbl_Door_2);
+		
+		JTextArea txtrDasZielDes = new JTextArea();
+		txtrDasZielDes.setLineWrap(true);
+		txtrDasZielDes.setText("Das Ziel des Spieles ist es, mit der eigenen Figur durch die Tür zu gehen. Damit die Tür passierbar wird, muss zunächst von dem Spieler oder dem Gegner das Geldstück aufgesammelt haben.");
+		txtrDasZielDes.setEditable(false);
+		tabbedPane.addTab("Anleitung", null, txtrDasZielDes, null);
 	}
 }
