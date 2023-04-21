@@ -1,6 +1,9 @@
 package de.adiko01.PointsAndDoors;
 
+import de.adiko01.java.tools.ConsoleArt;
+
 import java.util.Scanner;
+
 
 /**
  * Terminal interpreter für {@link PointsAndDoors}
@@ -9,7 +12,7 @@ import java.util.Scanner;
 public class PointsAndDoorsTerminal {
 	//Konstanten
 	/** Verion des Terminalinterpreters */
-	final static String VERSION = "2.0";
+	final static String VERSION = "2.1";
 
 
 	public static void main (String[] args) {
@@ -67,9 +70,9 @@ public class PointsAndDoorsTerminal {
 
 			//Gewinner Auswerten
 			if (game.getStatus() == GameStatus.PlayerWins) {
-				ConsoleArt.main("GEWONNEN");
+				ConsoleArt.print("GEWONNEN");
 			} else if (game.getStatus() == GameStatus.EnemyWins) {
-				ConsoleArt.main("VERLOREN");
+				ConsoleArt.print("VERLOREN");
 			}
 
 			//Nach dem Spiel das Spiel neustarten

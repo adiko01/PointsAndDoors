@@ -18,7 +18,9 @@ public class Konstanten {
 
 	/** Changelog Terminalinterpreter */
 	final static String CHANGELOG_TERMINAL =
-			"Version 2.0 - 2023-04-20\n"
+			"Version 2.1 - 2023-XX-XX\n"
+			+ " - Lade die Lib adiko01's Java-Tools in der Version 2023-04-21-Beta-1\n"
+			+ "Version 2.0 - 2023-04-20\n"
 			+ " - Baut auf der neuen Game Version 2.0 auf.";
 	/** Holt die Konstate CHANGELOG_TERMINAL */
 	public String getCHANGELOG_TERMINAL() {
