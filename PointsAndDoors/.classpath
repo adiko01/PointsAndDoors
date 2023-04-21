@@ -6,8 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/adiko01-Java-Tools-2023-04-21-Beta-1.jar">
+	<classpathentry exported="true" kind="lib" path="lib/adiko01-Java-Tools-2023-04-21-Beta-1.jar">
 		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/PointsAndDoors/lib/adiko01-Java-Tools-2023-04-21-Beta-1.jar!/doc"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
