@@ -12,13 +12,20 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 
+/**
+ * Die GUI zur Spielanleitung
+ * @author adiko01
+ * @version 1.0
+ */
 @SuppressWarnings("serial")
 public class GUI_Anleitung extends JFrame {
 
+	/** Das Pane */
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
+	 * @param args wird ignoriert
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

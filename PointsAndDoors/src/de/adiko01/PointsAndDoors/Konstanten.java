@@ -1,5 +1,9 @@
 package de.adiko01.PointsAndDoors;
 
+/**Klasse mit einer Sammlung an Konstanten
+ * @author adiko01
+ * @version 1.2
+ */
 public class Konstanten {
 	/** Programmtitel der Fenster */
 	final static String TITLE = "PointsAndDoors - Game Version: " + PointsAndDoors.VERSION + " - GUI: " + PointsAndDoorsGUI.GUI_VERSION;
@@ -10,7 +14,9 @@ public class Konstanten {
 			+ " - Anleitung hinzugefügt\n"
 			+ "Version 1.0 - 2023-04-20\n"
 			+ " - Erste GUI";
-	/** Holt die Konstate CHANGELOG_GUI */
+	
+	/** Holt die Konstate CHANGELOG_GUI
+	 * @return CHANGELOG_GUI*/
 	public String getCHANGELOG_GUI() {
 		return CHANGELOG_GUI;
 	}
@@ -22,7 +28,9 @@ public class Konstanten {
 			+ " - Lade die Lib adiko01's Java-Tools in der Version 2023-04-21-Beta-1\n"
 			+ "Version 2.0 - 2023-04-20\n"
 			+ " - Baut auf der neuen Game Version 2.0 auf.";
-	/** Holt die Konstate CHANGELOG_TERMINAL */
+	
+	/** Holt die Konstate CHANGELOG_TERMINAL
+	 * @return  CHANGELOG_TERMINAL*/
 	public String getCHANGELOG_TERMINAL() {
 		return CHANGELOG_TERMINAL;
 	}
@@ -49,7 +57,9 @@ public class Konstanten {
 			+ " - Spiel in PointsAndDoors umbenannt\n"
 			+ "Version 1.0 - 2023-02-22:\n"
 			+ " - Spiel Erstellt";
-	/** Holt die Konstate CHANGELOG_GAME mit dem Changelog des Spieles */
+	
+	/** Holt die Konstate CHANGELOG_GAME mit dem Changelog des Spieles
+	 * @return CHANGELOG_GAME */
 	public String getCHANGELOG_GAME() {
 		return CHANGELOG_GAME;
 	}
@@ -66,7 +76,8 @@ public class Konstanten {
 			+ "    cmd               Startet PoinsAndDoors im Terminal Modus.\n"
 			+ "    gui               Startet PoinsAndDoors im GUI Modus.\n";
 
-	/** Holt die Konstate HELP für den Programm aufruf im Terminal*/
+	/** Holt die Konstate HELP für den Programm aufruf im Terminal
+	 * @return HELP */
 	public String getHELP() {
 		return HELP;
 	}

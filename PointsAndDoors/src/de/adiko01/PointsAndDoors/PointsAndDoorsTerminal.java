@@ -8,13 +8,16 @@ import java.util.Scanner;
 /**
  * Terminal interpreter für {@link PointsAndDoors}
  * @author adiko01
+ * @version 2.1
  */
 public class PointsAndDoorsTerminal {
 	//Konstanten
 	/** Verion des Terminalinterpreters */
 	final static String VERSION = "2.1";
 
-
+	/**Start Methode des Interpreters
+	 * @param args werden Ignoriert
+	 */
 	public static void main (String[] args) {
 
 		while (true) {

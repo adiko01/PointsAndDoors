@@ -11,13 +11,19 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
+/**Changelog Panel
+ * @author adiko01
+ * @version 1.1
+ */
 @SuppressWarnings("serial")
 public class Changelog extends JFrame {
-
+	
+	/** Das Pane */
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
+	 * @param args werden ignoriert
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {

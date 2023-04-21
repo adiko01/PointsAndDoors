@@ -2,6 +2,10 @@ package de.adiko01.PointsAndDoors;
 
 import java.awt.Point;
 
+/**Das Spielobjekt
+ * @author adiko01
+ * @version 2.0
+ */
 public class PointsAndDoors {
 	// Konstanten
 	/** Verion der Spielmachenik */
@@ -105,8 +109,8 @@ public class PointsAndDoors {
 		}
 	}
 
-	/**
-	 * @return ob das Geldstück gefunden wurde
+	/**Boolean 
+	 * @return Ob das Geldstück gefunden wurde
 	 */
 	public boolean moneyFound () {
 		if (money.x==-1||money.y==-1) {
@@ -150,17 +154,20 @@ public class PointsAndDoors {
 		}
 	}
 
+	/** Gibt den aktuellen {@link GameStatus} zurück
+	 * @return aktueller {@link GameStatus}
+	 */
 	public GameStatus getStatus () {
 		return status;
 	}
 
-	/**
+	/**Task
 	 * @return Aktuelle Aufgabe als String
 	 */
 	public String getTask () {
 		return Task;
 	}
-	/**
+	/**Holt die aktuelle Porition eines {@code GameObjects}
 	 * @param obj ist ein Werte aus {@code GameObjects}
 	 * @return Position des Objektes auf dem Spielfeld als {@code int}
 	 */
@@ -186,7 +193,7 @@ public class PointsAndDoors {
 		return ret;
 	}
 
-	/**
+	/**Holt den Punkt zu einem {@code GameObjects}
 	 * @param obj ist ein Werte aus {@code GameObjects}
 	 * @return Position des Objektes auf dem Spielfeld als {@code Point}
 	 */
