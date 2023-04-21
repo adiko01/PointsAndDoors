@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
     <target name="javadoc">
-        <javadoc access="public" author="true" classpath="../lib/adiko01-Java-Tools-2023-04-21-Beta-1.jar" destdir="../doc" doctitle="PointsAndDoors" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="de.adiko01.PointsAndDoors" source="18" sourcepath="../src" splitindex="true" use="true" version="true">
-            <link href="jar:platform:/resource/PointsAndDoors/lib/adiko01-Java-Tools-2023-04-21-Beta-1.jar!/doc"/>
+        <javadoc access="public" author="true" classpath="../lib/adiko01-Java-Tools-Beta-1.jar" destdir="../doc" doctitle="PointsAndDoors" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="de.adiko01.PointsAndDoors" source="18" sourcepath="../src" splitindex="true" use="true" version="true">
+            <link href="jar:platform:/resource/PointsAndDoors/lib/adiko01-Java-Tools-Beta-1.jar!/doc"/>
         </javadoc>
     </target>
 </project>
