@@ -67,7 +67,7 @@ public class Changelog extends JFrame {
 		tabbedPane.addTab("GUI", null, textArea_GUI, null);
 
 		TextArea textArea_Terminal = new TextArea();
-		textArea_Terminal.setText("Wird ausgeführt, wenn die JAR mit dem Parameter cmd geöffnet wird.\n\n" + Konstanten.CHANGELOG_TERMINAL);
+		textArea_Terminal.setText("Wird ausgeführt, wenn die JAR mit dem Parameter cmd geöffnet wird.\r\n\r\nVersion 2.1 - 2024-01-03\r\n - Lade die Lib adiko01's Java-Tools in der Version 2023-04-21-Beta-1\r\nVersion 2.0 - 2023-04-20\r\n - Baut auf der neuen Game Version 2.0 auf.");
 		textArea_Terminal.setEditable(false);
 		tabbedPane.addTab("Terminal", null, textArea_Terminal, null);
 
