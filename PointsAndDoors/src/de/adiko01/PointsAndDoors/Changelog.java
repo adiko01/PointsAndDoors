@@ -62,7 +62,7 @@ public class Changelog extends JFrame {
 		tabbedPane.addTab("Game", null, textArea_Game, null);
 
 		TextArea textArea_GUI = new TextArea();
-		textArea_GUI.setText(Konstanten.CHANGELOG_GUI);
+		textArea_GUI.setText("Version 1.1 - 2024-01-03\r\n - Anleitung hinzugefügt\r\nVersion 1.0 - 2023-04-20\r\n - Erste GUI");
 		textArea_GUI.setEditable(false);
 		tabbedPane.addTab("GUI", null, textArea_GUI, null);
 
