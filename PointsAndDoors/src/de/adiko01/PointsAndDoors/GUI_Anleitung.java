@@ -121,7 +121,7 @@ public class GUI_Anleitung extends JFrame {
 		
 		JTextArea txtrDasZielDes = new JTextArea();
 		txtrDasZielDes.setLineWrap(true);
-		txtrDasZielDes.setText("Das Ziel des Spieles ist es, mit der eigenen Figur durch die Tür zu gehen. Damit die Tür passierbar wird, muss zunächst von dem Spieler oder dem Gegner das Geldstück aufgesammelt haben.");
+		txtrDasZielDes.setText("Das Ziel des Spieles ist es, mit der eigenen Figur durch die Tür zu gehen. Allerdings ist die Tür verschlosssen, damit die Tür geöffnet werden kann muss zuvor das Geldstück eingesammelt werden. Wenn der Gegner vor dir durch die Tür tritt hast du verloren.");
 		txtrDasZielDes.setEditable(false);
 		tabbedPane.addTab("Anleitung", null, txtrDasZielDes, null);
 	}
